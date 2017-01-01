@@ -1,0 +1,55 @@
+object Form1: TForm1
+  Left = 312
+  Height = 187
+  Top = 485
+  Width = 460
+  BorderIcons = []
+  BorderStyle = bsNone
+  Caption = 'tzbar'
+  ClientHeight = 187
+  ClientWidth = 460
+  Color = clBlack
+  FormStyle = fsStayOnTop
+  OnCreate = FormCreate
+  PopupMenu = PopupMenu1
+  ShowInTaskBar = stNever
+  LCLVersion = '1.6.0.4'
+  Visible = True
+  object Label1: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = Owner
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrCenter
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrCenter
+    Left = 0
+    Height = 54
+    Top = 0
+    Width = 78
+    Alignment = taCenter
+    Anchors = []
+    Caption = 'GMT 00:00'#13#10'GMT 00:00'#13#10'GMT 00:00'
+    Color = clBlack
+    Font.Color = clNone
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+    Visible = False
+  end
+  object IdleTimer1: TIdleTimer
+    Interval = 500
+    OnTimer = IdleTimer1Timer
+    left = 168
+    top = 64
+  end
+  object PopupMenu1: TPopupMenu
+    left = 200
+    top = 64
+    object MenuItem1: TMenuItem
+      Caption = '&Exit'
+      OnClick = MenuItem1Click
+    end
+  end
+end
